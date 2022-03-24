@@ -1,0 +1,179 @@
+<mat-card>
+
+  <form [formGroup]="DadosForm"
+      (submit)="EnviarForm(senha1.value,senha2.value)"
+     id="form"
+     >
+     <h1>Meus Dados</h1>
+
+     <div class="p1">
+      <label>Nome</label>
+      <input class="inp1"
+      type="text"
+      usuario="name"
+      matInput
+      [formControl]="Name"
+      >
+      <mat-error>
+        <span *ngIf="DadosForm.controls['name']. getError('required')">
+        </span>
+        <span *ngIf="DadosForm.controls['name'].
+          getError('name') ">
+          Isso não é um nome.
+        </span>
+      </mat-error>
+
+      <label>Sobrenome</label>
+      <input class="inp1"
+      type="text"
+      usuario="lastname"
+      [formControl]="Lastname"
+      matInput
+      >
+      <mat-error>
+        <span *ngIf="DadosForm.controls['lastname'].getError('required')">
+        </span>
+        <span *ngIf="DadosForm.controls['lastname'].
+          getError('lastname') ">
+          Isso não é um Sobrenome.
+        </span>
+      </mat-error>
+    </div>
+
+    <div class="p2">
+      <label>CPF</label>
+      <input class="inp2"
+      type="number"
+      usuario="cpf"
+      [formControl]="CPF"
+      matInput
+      >
+      <mat-error>
+        <span *ngIf="DadosForm.controls['cpf'].getError('required')">
+        </span>
+        <span *ngIf="DadosForm.controls['cpf'].
+          getError('cpf') ">
+          Isso não é um Cpf.
+        </span>
+      </mat-error>
+    </div>
+
+    <div class="p2">
+      <label>Telefone</label>
+      <input class="inp2"
+      type="tel"
+      usuario="telefone"
+      [formControl]="Telefone"
+      matInput
+      >
+      <mat-error>
+        <span *ngIf="DadosForm.controls['telefone'].getError('required')">
+        </span>
+        <span *ngIf="DadosForm.controls['telefone'].
+          getError('telefone') ">
+          Isso não é um telefone.
+        </span>
+      </mat-error>
+    </div>
+
+    <div class="p3">
+      <label>Endereço</label>
+      <input class="inp3"
+      type="text"
+      usuario="endereco"
+     [formControl]="Endereco"
+      matInput
+      >
+      <mat-error>
+        <span *ngIf="DadosForm.controls['endereco'].getError('required')">
+        </span>
+        <span *ngIf="DadosForm.controls['endereco'].
+          getError('endereco') ">
+          Isso não é um endereço
+        </span>
+      </mat-error>
+    </div>
+
+    <div class="p3">
+      <label for="complemento">Complemento</label>
+      <input class="inp3"
+      type="text"
+      usuario="complemento"
+      [formControl]="Complemento"
+      matInput
+      >
+      <mat-error>
+        <span *ngIf="DadosForm.controls['complemento'].getError('required')">
+        </span>
+        <span *ngIf="DadosForm.controls['complemento'].
+          getError('complemento') ">
+          Isso não é um complemento
+        </span>
+      </mat-error>
+    </div>
+
+    <div class="p2">
+      <label>Nome do Usuário</label>
+      <input class="inp2"
+      type="text"
+      usuario="username"
+      [formControl]="Username"
+      matInput
+      >
+      <mat-error>
+        <span *ngIf="DadosForm.controls['username'].getError('required')">
+        </span>
+        <span *ngIf="DadosForm.controls['username'].
+          getError('username') ">
+          Isso não é um Nome de Usuário
+        </span>
+      </mat-error>
+    </div>
+
+    <div class="p1">
+      <label>Senha</label>
+      <input class="inp1"
+      type="password"
+      usuario="senha"
+      [formControl]="Senha"
+      matInput
+      #senha1
+      >
+      <mat-error>
+        <span *ngIf="DadosForm.controls['senha'].getError('required')">
+        </span>
+        <span *ngIf="DadosForm.controls['senha'].
+          getError('senha') ">
+          Senha Inválida.
+        </span>
+      </mat-error>
+
+      <label>Repita a Senha</label>
+      <input class="inp1"
+      type="password"
+      usuario="senha2"
+      [formControl]="Senha2"
+      #senha2
+      >
+      <mat-error>
+        <span *ngIf="DadosForm.controls['senha2'].getError('required')">
+        </span>
+        <span *ngIf="DadosForm.controls['senha2'].
+          getError('senha2') ">
+          Senha Inválida.
+        </span>
+      </mat-error>
+    </div>
+
+    <div>
+      <button
+      mat-button
+      type="submit"
+      (click)="MostrarDados()"
+      >Registrar</button>
+    </div>
+  </form>
+</mat-card>
+
+
+

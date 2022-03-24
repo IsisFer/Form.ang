@@ -1,0 +1,56 @@
+mat-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+ background: rgba(128, 128, 128, 0.26);
+
+}
+
+div{
+  margin:10px;
+  background: rgba(216, 112, 147, 0.068);
+
+}
+
+#form{
+  display: flex;
+  flex-direction: column;
+  width: 71vh;
+  background: pink;
+  box-shadow: 0px 0px 15px 0px rgba(128, 0, 128, 0.5);
+}
+
+h1{
+  margin-left: 26vh;
+  font-family: fantasy;
+  color: black;
+}
+
+.p1, .inp1{
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.p2,.inp2{
+  margin-left: 13px;
+}
+
+
+.p3, .inp3{
+  display: flex;
+  width: 49vh;
+  flex-direction: column;
+}
+
+
+button{
+  left: 243px;
+  width: 164px;
+  background: black;
+  color: white;
+  font-size: 20px;
+}
+
+
